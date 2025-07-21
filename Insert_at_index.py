@@ -1,3 +1,20 @@
-my_list = [15, 16, 17, 18, 19, 20, 21]
-my_list.insert(5, 78)
-print(f"  After inserting 78 at index 5: {my_list}")
+def Node(data):
+    pass
+
+
+def insert_at_index(self, index, data):
+    if index < 0:
+        raise IndexError("Index cannot be negative")
+    new_node = Node(data)
+    if index == 0:
+        self.insert_at_start(data)
+        return
+    temp = self.head
+    for i in range(index - 1):
+        if not temp:
+            raise IndexError("Index out of range")
+        temp = temp.next
+    if not temp:
+        raise IndexError("Index out of range")
+    new_node.next = temp.next
+    temp.next = new_node

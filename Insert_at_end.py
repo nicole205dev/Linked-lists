@@ -1,3 +1,9 @@
-my_list = [15, 16, 17, 18, 19, 20, 21]
-my_list.append(22)
-print(f"After inserting at the end: {my_list[-1]}")
+def insert_at_end(self, data):
+    new_node = Node(data)
+    if not self.head:
+        self.head = new_node
+        return
+    temp = self.head
+    while temp.next:
+        temp = temp.next
+    temp.next = new_node

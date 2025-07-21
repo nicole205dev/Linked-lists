@@ -1,3 +1,4 @@
-my_list = [15, 16, 17, 18, 19, 20, 21]
-my_list.insert(0, 14)
-print(f"After inserting at the start: {my_list}")
+def insert_at_start(self, data):
+    new_node = Node(data)
+    new_node.next = self.head
+    self.head = new_node

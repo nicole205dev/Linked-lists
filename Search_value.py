@@ -1,11 +1,11 @@
-def search(my_list, value):
-    if value in my_list:
-        return my_list.index(value)
-    else:
-        return -1
-my_list = [15, 16, 17, 18, 19, 20, 21]
-result = search(my_list, 18)
-print(f"Index: {result}")
-
+def search(self, value):
+    temp = self.head
+    index = 0
+    while temp:
+        if temp.data == value:
+            return index
+        temp = temp.next
+        index += 1
+    return -1
 
 
